@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8" />
+    <title>AxelBase – UUID v1 (Timestamp) Generator</title>
+
+    <link rel="icon" href="../../AxelLab-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#EDFF21" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    
+		<link href="../../_app/immutable/assets/0.PTThlS7-.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/10.DVZcINtg.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BNyWsptp.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DtzuXk4o.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/gZmWwNMp.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CKWrYavF.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CD6n3cT_.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/D6ygWUco.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.Dn157bRo.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BuUuZXwI.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CEA9ZyY2.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Cb26yy2D.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BSU0aMLA.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.C-nDeJ31.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/23z7tF0b.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/fDPzCuMt.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BCjuOeFR.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DKevlYpM.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BIZZLGvp.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/10.EjREohdm.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BVr1Bipn.js"><!--q8x3kg--><meta name="description" content="Learn how to override the node and clock sequence in UUID v1 for testing, debugging, and deterministic ID generation."/> <meta property="og:title" content="Custom Node &amp; Clock Sequence: Full Control"/> <meta property="og:description" content="Advanced UUID v1 features: set your own 48-bit node and 14-bit clock sequence for reproducible, testable identifiers."/> <meta property="og:url" content="../../blog/posts/post6"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>Custom Node &amp; Clock Sequence: Full Control Over UUID v1</title>
+</head>
+<body data-bs="dark" class="h-100 bg-body text-body" data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[--><!----><header class="custom-navbar"><nav class="container d-flex justify-content-between align-items-center"><div class="d-flex align-items-center gap-3"><a href="../../" aria-label="Home" class="d-flex align-items-center text-decoration-none"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-brand-logo"/></a> <a class="navbar-brand-text" href="../../">AxelBase</a> <div class="bmac-nav-item ms-4 d-none d-md-block"><button class="bmac-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> Buy me a coffee</button> <!--[!--><!--]--></div></div> <ul class="d-flex align-items-center gap-4 list-unstyled m-0"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul></nav></header> <!--[--><!----><div class="container fade-in post-layout svelte-q8x3kg"><div class="breadcrumbs svelte-q8x3kg"><a href="../../blog" class="svelte-q8x3kg">Blog</a> <span>/</span> <p>Custom Node &amp; Clock Sequence</p></div> <article class="prose svelte-q8x3kg"><h1 class="svelte-q8x3kg">Custom Node &amp; Clock Sequence: Full Control Over UUID v1</h1> <p class="post-meta svelte-q8x3kg">Published: November 28, 2025</p> <p>While most UUID v1 tools hide the internals, this generator exposes full control via the Advanced panel — perfect for testing and edge cases.</p> <h2 class="svelte-q8x3kg">The 48-bit Node Field</h2> <p>Traditionally the MAC address. Now you can set any 12-hex-digit value (e.g., <code>001122334455</code>). All generated UUIDs will end with that node — great for:</p> <ul class="svelte-q8x3kg"><li class="svelte-q8x3kg">Testing sharding logic</li> <li class="svelte-q8x3kg">Simulating multiple devices</li> <li class="svelte-q8x3kg">Creating deterministic test data</li></ul> <h2 class="svelte-q8x3kg">The 14-bit Clock Sequence</h2> <p>Prevents duplicates when time goes backward. You can force any value 0–16383. Useful for:</p> <ul class="svelte-q8x3kg"><li class="svelte-q8x3kg">Reproducing collision scenarios</li> <li class="svelte-q8x3kg">Testing clock rollback handling</li> <li class="svelte-q8x3kg">Generating identical UUID streams</li></ul> <h2 class="svelte-q8x3kg">Real Example</h2> <p>Set Node = <code>aabbccddeeff</code>, Clock Seq = <code>42</code> → every UUID becomes:</p> <code class="d-block p-3 bg-dark text-light rounded">xxxxxxxx-xxxx-1xxx-xxxx-aabbccddeeff</code> <h2 class="svelte-q8x3kg">FAQ</h2> <details class="svelte-q8x3kg"><summary class="svelte-q8x3kg">Is this breaking RFC compliance?</summary> <p>No — the RFC allows custom nodes and clock sequences as long as version/variant bits are correct.</p></details> <p class="italic-note svelte-q8x3kg">Full control. Full compliance. Zero compromise.</p></article></div><!----><!--]--> <footer class="custom-footer"><div class="container text-center"><span>© AxelBase UUID v1 (Timestamp) Generator – 2025</span> <span class="mx-2">•</span> <a href="../../privacy" class="footer-link">Privacy</a> <a href="../../terms" class="footer-link">Terms</a></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_hmdwab = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/uuid-v1-generator"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.BNyWsptp.js"),
+						import("../../_app/immutable/entry/app.Dn157bRo.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 10],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
