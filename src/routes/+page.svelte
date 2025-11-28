@@ -204,7 +204,7 @@
                 {/if}
             </div>
 
-<section id="about" class="py-5 mt-5 bg-light rounded-4">
+<section id="about" class="py-5 mt-5 rounded-4">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-9 text-center">
@@ -282,7 +282,7 @@
   </div>
 </section>
 
-<section id="faq" class="py-5 mt-5 bg-light rounded-4">
+<section id="faq" class="py-5 mt-5 rounded-4">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-9">
