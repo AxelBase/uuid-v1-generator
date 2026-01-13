@@ -1,0 +1,1 @@
+import{j as o,k as u,H as p,o as t,p as _,C as g,q as i,v as l,w as d,x as v}from"./C-GC_Ssr.js";function E(n,r){let s=null,f=t;var a;if(t){s=v;for(var e=_(document.head);e!==null&&(e.nodeType!==g||e.data!==n);)e=i(e);if(e===null)l(!1);else{var y=i(e);e.remove(),d(y)}}t||(a=document.head.appendChild(o()));try{u(()=>r(a),p)}finally{f&&(l(!0),d(s))}}export{E as h};

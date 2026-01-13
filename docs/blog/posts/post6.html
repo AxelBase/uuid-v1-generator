@@ -16,34 +16,33 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     
-		<link href="../../_app/immutable/assets/0.PTThlS7-.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/0.D-NjRLSR.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/10.DVZcINtg.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.BE58Ojx5.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/wcSI6Pdd.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/gZmWwNMp.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/CKWrYavF.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/DhxObd-V.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/D6ygWUco.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.B5Y_6T49.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/BuUuZXwI.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/CEA9ZyY2.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/Cb26yy2D.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/BSU0aMLA.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/0.DV_BT4Ux.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/23z7tF0b.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/fDPzCuMt.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/BCjuOeFR.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/DKevlYpM.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/BIZZLGvp.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/10.CMDv1CD4.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/BVr1Bipn.js"><!--q8x3kg--><meta name="description" content="Learn how to override the node and clock sequence in UUID v1 for testing, debugging, and deterministic ID generation."/> <meta property="og:title" content="Custom Node &amp; Clock Sequence: Full Control"/> <meta property="og:description" content="Advanced UUID v1 features: set your own 48-bit node and 14-bit clock sequence for reproducible, testable identifiers."/> <meta property="og:url" content="../../blog/posts/post6"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>Custom Node &amp; Clock Sequence: Full Control Over UUID v1</title>
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.BpO8W9ch.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CCcA52mu.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C-GC_Ssr.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CD80wl82.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BoNLeb51.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Oio8Tllj.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.BZt3VfTv.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/QwHQTx1p.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DIwn6w_s.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/ChrC7I-c.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/2c2D3FkQ.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.BNQM_btG.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Bo-KtuFG.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/u4S4TP-a.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CUsxrfzn.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/D6EAlzxZ.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/10.RasqDo8Q.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/lykHnoix.js"><!--q8x3kg--><meta name="description" content="Learn how to override the node and clock sequence in UUID v1 for testing, debugging, and deterministic ID generation."/> <meta property="og:title" content="Custom Node &amp; Clock Sequence: Full Control"/> <meta property="og:description" content="Advanced UUID v1 features: set your own 48-bit node and 14-bit clock sequence for reproducible, testable identifiers."/> <meta property="og:url" content="../../blog/posts/post6"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>Custom Node &amp; Clock Sequence: Full Control Over UUID v1</title>
 </head>
 <body data-bs="dark" class="h-100 bg-body text-body" data-sveltekit-preload-data="hover">
-    <div style="display: contents"><!--[--><!--[--><!----><header class="custom-navbar"><nav class="container d-flex justify-content-between align-items-center"><div class="d-flex align-items-center gap-3"><a href="../../" aria-label="Home" class="d-flex align-items-center text-decoration-none"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-brand-logo"/></a> <a class="navbar-brand-text" href="../../">AxelBase</a> <div class="bmac-nav-item ms-4 d-none d-md-block"><button class="bmac-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> Buy me a coffee</button> <!--[!--><!--]--></div></div> <ul class="d-flex align-items-center gap-4 list-unstyled m-0"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul></nav></header> <!--[--><!----><div class="container fade-in post-layout svelte-q8x3kg"><div class="breadcrumbs svelte-q8x3kg"><a href="../../blog" class="svelte-q8x3kg">Blog</a> <span>/</span> <p>Custom Node &amp; Clock Sequence</p></div> <article class="prose svelte-q8x3kg"><h1 class="svelte-q8x3kg">Custom Node &amp; Clock Sequence: Full Control Over UUID v1</h1> <p class="post-meta svelte-q8x3kg">Published: November 28, 2025</p> <p>While most UUID v1 tools hide the internals, this generator exposes full control via the Advanced panel — perfect for testing and edge cases.</p> <h2 class="svelte-q8x3kg">The 48-bit Node Field</h2> <p>Traditionally the MAC address. Now you can set any 12-hex-digit value (e.g., <code>001122334455</code>). All generated UUIDs will end with that node — great for:</p> <ul class="svelte-q8x3kg"><li class="svelte-q8x3kg">Testing sharding logic</li> <li class="svelte-q8x3kg">Simulating multiple devices</li> <li class="svelte-q8x3kg">Creating deterministic test data</li></ul> <h2 class="svelte-q8x3kg">The 14-bit Clock Sequence</h2> <p>Prevents duplicates when time goes backward. You can force any value 0–16383. Useful for:</p> <ul class="svelte-q8x3kg"><li class="svelte-q8x3kg">Reproducing collision scenarios</li> <li class="svelte-q8x3kg">Testing clock rollback handling</li> <li class="svelte-q8x3kg">Generating identical UUID streams</li></ul> <h2 class="svelte-q8x3kg">Real Example</h2> <p>Set Node = <code>aabbccddeeff</code>, Clock Seq = <code>42</code> → every UUID becomes:</p> <code class="d-block p-3 bg-dark text-light rounded">xxxxxxxx-xxxx-1xxx-xxxx-aabbccddeeff</code> <h2 class="svelte-q8x3kg">FAQ</h2> <details class="svelte-q8x3kg"><summary class="svelte-q8x3kg">Is this breaking RFC compliance?</summary> <p>No — the RFC allows custom nodes and clock sequences as long as version/variant bits are correct.</p></details> <p class="italic-note svelte-q8x3kg">Full control. Full compliance. Zero compromise.</p></article></div><!----><!--]--> <footer class="custom-footer"><div class="container text-center"><span>© AxelBase UUID v1 (Timestamp) Generator – 2025</span> <span class="mx-2">•</span> <a href="../../privacy" class="footer-link">Privacy</a> <a href="../../terms" class="footer-link">Terms</a></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+    <div style="display: contents"><!--[--><!--[--><!----><header class="custom-navbar"><nav class="container d-flex justify-content-between align-items-center"><div class="d-flex align-items-center gap-3"><a href="../../" aria-label="Home" class="d-flex align-items-center text-decoration-none"><img src="../../AxelLab-Logo.ico" alt="AxelBase Logo" class="navbar-brand-logo"/></a> <a class="navbar-brand-text" href="../../">AxelBase</a> <div class="bmac-nav-item ms-4 d-none d-md-block"><button class="bmac-button d-flex align-items-center gap-2 svelte-12qhfyh" aria-label="Support AxelBase"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2,21V19H20V21H2M20,8V5H4V8H20M20,10H4V13C4,14.38 4.5,15.63 5.31,16.58L11.64,19H12.36L18.69,16.58C19.5,15.63 20,14.38 20,13V10M16,2H8V4H16V2Z"></path></svg> <span>Buy me a coffee</span></button> <!--[!--><!--]--></div></div> <ul class="d-flex align-items-center gap-4 list-unstyled m-0"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul></nav></header> <!--[--><!----><div class="container fade-in post-layout svelte-q8x3kg"><div class="breadcrumbs svelte-q8x3kg"><a href="../../blog" class="svelte-q8x3kg">Blog</a> <span>/</span> <p>Custom Node &amp; Clock Sequence</p></div> <article class="prose svelte-q8x3kg"><h1 class="svelte-q8x3kg">Custom Node &amp; Clock Sequence: Full Control Over UUID v1</h1> <p class="post-meta svelte-q8x3kg">Published: November 28, 2025</p> <p>While most UUID v1 tools hide the internals, this generator exposes full control via the Advanced panel — perfect for testing and edge cases.</p> <h2 class="svelte-q8x3kg">The 48-bit Node Field</h2> <p>Traditionally the MAC address. Now you can set any 12-hex-digit value (e.g., <code>001122334455</code>). All generated UUIDs will end with that node — great for:</p> <ul class="svelte-q8x3kg"><li class="svelte-q8x3kg">Testing sharding logic</li> <li class="svelte-q8x3kg">Simulating multiple devices</li> <li class="svelte-q8x3kg">Creating deterministic test data</li></ul> <h2 class="svelte-q8x3kg">The 14-bit Clock Sequence</h2> <p>Prevents duplicates when time goes backward. You can force any value 0–16383. Useful for:</p> <ul class="svelte-q8x3kg"><li class="svelte-q8x3kg">Reproducing collision scenarios</li> <li class="svelte-q8x3kg">Testing clock rollback handling</li> <li class="svelte-q8x3kg">Generating identical UUID streams</li></ul> <h2 class="svelte-q8x3kg">Real Example</h2> <p>Set Node = <code>aabbccddeeff</code>, Clock Seq = <code>42</code> → every UUID becomes:</p> <code class="d-block p-3 bg-dark text-light rounded">xxxxxxxx-xxxx-1xxx-xxxx-aabbccddeeff</code> <h2 class="svelte-q8x3kg">FAQ</h2> <details class="svelte-q8x3kg"><summary class="svelte-q8x3kg">Is this breaking RFC compliance?</summary> <p>No — the RFC allows custom nodes and clock sequences as long as version/variant bits are correct.</p></details> <p class="italic-note svelte-q8x3kg">Full control. Full compliance. Zero compromise.</p></article></div><!----><!--]--> <footer class="custom-footer"><div class="container text-center"><span>© AxelBase UUID v1 (Timestamp) Generator – 2026</span> <span class="mx-2">•</span> <a href="../../privacy" class="footer-link">Privacy</a> <a href="../../terms" class="footer-link">Terms</a></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_gn2p9v = {
+					__sveltekit_1vgmoj = {
 						base: new URL("../..", location).pathname.slice(0, -1),
 						assets: "/uuid-v1-generator"
 					};
@@ -51,8 +50,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.BE58Ojx5.js"),
-						import("../../_app/immutable/entry/app.B5Y_6T49.js")
+						import("../../_app/immutable/entry/start.BpO8W9ch.js"),
+						import("../../_app/immutable/entry/app.BZt3VfTv.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 10],
